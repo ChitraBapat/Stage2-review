@@ -7,7 +7,7 @@ while [ $x -eq 1 ]
 do
 
 n=$(( RANDOM%10000 ))
-if [ $n -gt 999 ];
+if [ $n -ge 1000 ];
 then
 (( i++ ))
 echo "$i $n"
@@ -18,7 +18,7 @@ r=$(( $n%$j ))
 
 if [ $r -ne 0 ];
 then
-if [ $j -eq $n ];
+if [ $(( $j + 1 )) -eq $n ];
 then
 echo "$n is prime"
 x=0
