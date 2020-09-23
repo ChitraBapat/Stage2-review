@@ -1,7 +1,8 @@
 #!/bin/bash
+
 x=1
 i=0
-while [ x=1 ]
+while [ $x -eq 1 ]
 
 do
 
@@ -15,14 +16,14 @@ for (( j=2; j<$n; j++ ))
 do
 r=$(( $n%$j ))
 
-if [ $r -eq 0 ];
+if [ $r -ne 0 ];
 then
-break
-elif [ $j -eq $n ];
+if [ $(( $j+1 )) -eq $n ];
 then
 echo "$n is prime"
 x=0
 continue
+fi
 fi
 done
 fi
