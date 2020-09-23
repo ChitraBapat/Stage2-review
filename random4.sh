@@ -9,7 +9,7 @@ n=$(( RANDOM%10000 ))
 if [ $n -gt 999 ];
 then
 (( i++ ))
-echo "$i"
+echo "$i $n"
 for (( j=2; j<$n; j++ ))
 
 do
@@ -20,6 +20,7 @@ then
 break
 elif [ $j -eq $n ];
 then
+echo "$n is prime"
 x=0
 continue
 fi
