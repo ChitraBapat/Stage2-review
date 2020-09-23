@@ -18,7 +18,7 @@ r=$(( $n%$j ))
 
 if [ $r -ne 0 ];
 then
-if [ $(( $j+1 )) -eq $n ];
+if [ $j -eq $n ];
 then
 echo "$n is prime"
 x=0
